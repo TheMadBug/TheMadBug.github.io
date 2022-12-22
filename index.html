@@ -149,6 +149,10 @@
     .carousel__body .carousel__slider__item.sj .item__3d-frame__box {
         background: linear-gradient(0deg, rgba(20,20,30,1) 0%, rgba(70,70,80,1) 6%, rgba(90,90,110,1) 91%, rgba(60,60,110,1) 100%);
     }
+    .carousel__body .carousel__slider__item.tl .item__3d-frame__box {
+        background: black;
+        color: white;
+    }
     
 
     .hero-container {
@@ -181,6 +185,10 @@
     </style>
     <body>
         <audio id="song" src="heroes.mp3"></audio>
+
+        <div id="letsdance">
+          <a onclick="clickToBegin()">Click To Begin</a>
+        </div>
 
         <div id="main-carousel" class="carousel" style="visibility:hidden">
           <div class="carousel__body">
@@ -244,7 +252,7 @@
                     <div class="hero-container">
                         <div><img src="Void.gif"></div>
                         <p class="name">Void</p>
-                        <p class="title">The One True God (TM)</p>
+                        <p class="title">The One True God &trade;</p>
                     </div>
                   </div>
                   <div class="item__3d-frame__box item__3d-frame__box--left"></div>
@@ -283,7 +291,7 @@
                     <div class="hero-container">
                         <div><img src="Golem.gif" /></div>
                         <p class="name">Golem-Head-Predictor</p>
-                        <p class="title">Goal Driven</p>
+                        <p class="title">Goal Orientated</p>
                     </div>
                   </div>
                   <div class="item__3d-frame__box item__3d-frame__box--left"></div>
@@ -386,7 +394,7 @@
                   <div class="item__3d-frame__box item__3d-frame__box--front">
                     <div class="hero-container">
                     <div><img src="spaceship.png" /></div>
-                    <p class="name">The Dragon Re-Born</p>
+                    <p class="name">Space</p>
                     <p class="title">Major Tom's a junkie</p>
                     </div>
                   </div>
@@ -439,7 +447,7 @@
                     <div class="hero-container">
                     <div><img src="Talix.gif" /></div>
                     <p class="name">Talix</p>
-                    <p class="title">That's my jam</p>
+                    <p class="title">You know that new sound you were looking for?</p>
                     </div>
                   </div>
                   <div class="item__3d-frame__box item__3d-frame__box--left"></div>
@@ -451,7 +459,20 @@
                   <div class="item__3d-frame__box item__3d-frame__box--front">
                     <div class="hero-container">
                     <p class="name">Happy 2 Year Anniversary</p>
-                    <p class="title">And Merry Christmas</p>
+                    <p class="title">6 seasons and a movie</p>
+                    </div>
+                  </div>
+                  <div class="item__3d-frame__box item__3d-frame__box--left"></div>
+                  <div class="item__3d-frame__box item__3d-frame__box--right"></div>
+                </div>
+              </div>
+              <div class="carousel__slider__item tl">
+                <div class="item__3d-frame">
+                  <div class="item__3d-frame__box item__3d-frame__box--front">
+                    <div class="hero-container">
+                    <div><img src="portal-pixel-art.gif" /></div>
+                    <p class="name">Oh no - a Time Loop</p>
+                    <p class="title">Here we go again</p>
                     </div>
                   </div>
                   <div class="item__3d-frame__box item__3d-frame__box--left"></div>
@@ -460,10 +481,6 @@
               </div>
             </div>
           </div>
-        </div>
-
-        <div id="letsdance">
-          <a onclick="clickToBegin()">Click To Begin</a>
         </div>
 
         <script>
@@ -478,7 +495,7 @@
               
               var width, height, totalWidth, margin = 20,
                   currIndex = 0,
-                  interval, intervalTime = 5500;
+                  interval, intervalTime = 5000;
               
               function init() {
                   resize();
